@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awan Mansuri | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+        <p>Loading Portfolio...</p>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+    
+    <!-- 3D Background Canvas -->
+    <canvas id="threejs-bg"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="profile-image">
+                <img src="img.jpg" alt="Awan Mansuri" class="hero-profile-img">
+            </div>
+            <h1 class="hero-title">Awan Mansuri</h1>
+            <div class="role-container">
+                <h2 class="hero-subtitle">BSc IT Student & Frontend Developer</h2>
+                <span class="role-divider"></span>
+            </div>
+            <p class="hero-description">Passionate about creating beautiful web experiences while pursuing my IT degree</p>
+            <div class="availability-badge">
+                <span class="status-dot"></span>
+                Available for freelance projects
+            </div>
+            <div class="hero-buttons">
+                <a href="#projects" class="cta-button">View Projects</a>
+                <a href="#contact" class="cta-button secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div id="model-container"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a third-year BSc IT student at Lj University with a passion for web development and problem-solving through code.</p>
+                <p>Through self-directed learning and academic projects, I've developed strong skills in front-end development, database management, and programming fundamentals.</p>
+                <p>I enjoy creating interactive applications that provide real value to users while maintaining clean, efficient code.</p>
+            </div>
+            <div class="about-cards">
+                <div class="info-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                    <p>BSc in Information Technology</p>
+                    <p>Lj University</p>
+                    <p>2023 - Present</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Ahmedabad, Gujarat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <!-- Frontend Skills -->
+            <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+
+            <!-- Backend Skills -->
+            <div class="skill-item">
+                <i class="fab fa-php"></i>
+                <span>PHP</span>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>MySQL</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-laravel"></i>
+                <span>Laravel</span>
+            </div>
+
+            <!-- Programming Languages -->
+            <div class="skill-item">
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C" style="width: 40px; height: 40px;">
+                <span>C</span>
+            </div>
+            <div class="skill-item">
+                <img src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png" alt="C++" style="width: 40px; height: 40px;">
+                <span>C++</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-r-project"></i>
+                <span>R</span>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-item">
+                <i class="fab fa-linux"></i>
+                <span>Linux</span>
+            </div>
+        </div>
+    </section>
+<!-- Projects Section -->
+<section id="projects" class="section projects">
+  <h2 class="section-title">My Projects</h2>
+  <div class="projects-container">
+
+    <!-- Quiz Master -->
+    <div class="project-card">
+      <div class="project-icon-wrapper">
+        <div class="project-icon quiz-icon">
+          <div class="quiz-logo">
+            <i class="fas fa-lightbulb"></i>
+            <i class="fas fa-question"></i>
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-details">
+        <h3>Quiz Master</h3>
+        <p>An interactive quiz application with multiple subjects and difficulty levels, featuring real-time feedback and score tracking.</p>
+        <div class="project-tech">
+          <span><i class="fab fa-html5"></i> HTML</span>
+          <span><i class="fab fa-css3-alt"></i> CSS</span>
+          <span><i class="fab fa-js"></i> JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://quizzz-master.netlify.app/" target="_blank" class="project-link">
+            <i class="fas fa-globe"></i>
+            <span>Live Demo</span>
+          </a>
+          <a href="https://github.com/Awan-01/Quizzz-Master.git" target="_blank" class="project-link secondary">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BrewMaster Cafe -->
+    <div class="project-card">
+      <div class="project-icon-wrapper">
+        <div class="project-icon cafe-icon">
+          <div class="cafe-logo">
+            <i class="fas fa-coffee icon"></i>
+            <i class="fas fa-mug-hot icon"></i>
+            <i class="fas fa-shopping-cart icon"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-details">
+        <h3>BrewMaster Cafe</h3>
+        <p>A responsive coffee shop web app with product filtering, shopping cart, dark mode toggle, and interactive UI elements for an engaging user experience.</p>
+        <div class="project-tech">
+          <span><i class="fab fa-html5"></i> HTML</span>
+          <span><i class="fab fa-css3-alt"></i> CSS</span>
+          <span><i class="fab fa-js"></i> JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://brewmastercafe.netlify.app/" target="_blank" class="project-link">
+            <i class="fas fa-globe"></i>
+            <span>Live Demo</span>
+          </a>
+          <a href="https://github.com/Awan-01/BrewMaster-Cafe.git" target="_blank" class="project-link secondary">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nanodo -->
+    <div class="project-card">
+      <div class="project-icon-wrapper">
+        <div class="project-icon todo-icon">
+          <div class="todo-logo">
+            <i class="fas fa-check-square"></i>
+            <i class="fas fa-calendar-alt"></i>
+            <i class="fas fa-tasks"></i>
+          </div>
+        </div>
+      </div>
+      <div class="project-details">
+        <h3>Nanodo</h3>
+        <p>A feature-rich task manager with calendar view, filtering options, and export functionality.</p>
+        <div class="project-tech">
+          <span><i class="fab fa-html5"></i> HTML</span>
+          <span><i class="fab fa-css3-alt"></i> CSS</span>
+          <span><i class="fab fa-js"></i> JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://nanodo.netlify.app/" target="_blank" class="project-link">
+            <i class="fas fa-globe"></i>
+            <span>Live Demo</span>
+          </a>
+          <a href="https://github.com/Awan-01/NanoDo-Smart-Stylish-To-Do-App.git" target="_blank" class="project-link secondary">
+            <i class="fab fa-github"></i>
+            <span>View Code</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* BrewMaster Cafe icon styling */
+  .cafe-icon {
+    background: transparent;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .cafe-logo {
+    display: flex;
+    gap: 0.7rem;
+  }
+
+  /* Base color for all BrewMaster Cafe icons */
+  .cafe-logo .icon {
+    color: #6b4c3b; /* warm coffee brown */
+  }
+
+  /* Smooth transitions */
+  .cafe-logo i {
+    font-size: 2.2rem;
+    animation: none !important;
+    transform: none !important;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  /* Hover effect: scale up and lighten all icons */
+  .cafe-icon:hover .icon {
+    transform: scale(1.15);
+    color: #d9c4a7; /* creamy beige */
+  }
+</style>
+
+<!-- Font Awesome CDN for icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section certificates">
+        <h2 class="section-title">Professional Certifications</h2>
+        <div class="certificates-grid-container">
+            <div class="certificates-header">
+                <p class="certificates-intro">Continuous learning and skill development through recognized certifications</p>
+            </div>
+            <div class="certificates-container">
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certificate-details">
+                        <div class="certificate-platform">University of Michigan</div>
+                        <h3>Introduction to HTML5</h3>
+                        <p class="certificate-description">Comprehensive understanding of modern HTML5 features and best practices</p>
+                        <p class="certificate-date">Dec 2023</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/UJ7SE8P9CGVY?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certificate-details">
+                        <div class="certificate-platform">IBM</div>
+                        <h3>Introduction to Relational Databases</h3>
+                        <p class="certificate-description">Mastery in database design and management principles</p>
+                        <p class="certificate-date">Mar 2024</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/3MEFKHRNUVPH?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certificate-details">
+                        <div class="certificate-platform">University of Michigan</div>
+                        <h3>Interactivity with JavaScript</h3>
+                        <p class="certificate-description">Advanced JavaScript techniques for interactive web development</p>
+                        <p class="certificate-date">May 2023</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/2CMVY6XC3ME6?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certificate-details">
+                        <div class="certificate-platform">Coursera</div>
+                        <h3>Learn Object-Oriented Programming with PHP</h3>
+                        <p class="certificate-description">Fundamentals of object-oriented programming in PHP</p>
+                        <p class="certificate-date">July 2024</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/QWYP8W32WQJC?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certificate-details">
+                        <div class="certificate-platform">University of California, Santa Cruz</div>
+                        <h3>C++ For C Programmers</h3>
+                        <p class="certificate-description">Advanced C++ programming concepts for C programmers</p>
+                        <p class="certificate-date">July 2024</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/JYASXBBWRT5N?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certificate-details">
+                        <div class="certificate-platform">Board Infinity</div>
+                        <h3>Mastering Laravel Framework and PHP</h3>
+                        <p class="certificate-description">Advanced skills in Laravel framework and PHP development</p>
+                        <p class="certificate-date">Jan 2025</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/NIIN4P7M0AZS?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certificate-details">
+                        <div class="certificate-platform">Johns Hopkins University</div>
+                        <h3>R Programming</h3>
+                        <p class="certificate-description">Advanced R programming skills and data analysis</p>
+                        <p class="certificate-date">Jan 2025</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/HBSGCGZZ535E?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse" class="certificate-link">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's Connect!</h3>
+                <p>I'm currently available for freelance projects and exciting collaborations. Let's create something amazing together!</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>awanmansuri007@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ahmedabad, Gujarat</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Awan-01" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/awan-mansuri-88224b299" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.instagram.com/awan__mansuri" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <form id="contact-form" class="contact-form" action="process_contact.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <span class="error-message" id="subject-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message Overlay -->
+    <div class="success-overlay" id="successOverlay">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+            <div class="redirect-text">Redirecting to homepage in <span id="countdown">5</span> seconds...</div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.min.js"></script>
+    <script src="js/threejs-scene.js"></script>
+    <script src="js/gsap-animations.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("3Bki_D0MTtFsSwRKM");
+        })();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
